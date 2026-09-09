@@ -1,0 +1,150 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Arial, sans-serif;
+color: #3A332A;
+}
+
+body {
+background-color: #FDFBF7;
+display: flex;
+height: 100vh;
+}
+
+/* Container do Menu Lateral */
+.navigation-sidebar {
+width: 280px;
+background-color: #F4EFE6;
+border-right: 2px solid #EAE2D5;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
+padding: 30px 20px;
+}
+
+/* Topo do Menu: Logo/Marca */
+.brand-header {
+text-align: center;
+padding-bottom: 25px;
+border-bottom: 2px solid #EAE2D5;
+}
+
+.brand-header .icon-moinho {
+font-size: 32px;
+margin-bottom: 8px;
+display: block;
+}
+
+.brand-header h2 {
+font-size: 22px;
+color: #D9A05B;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+.brand-header span {
+font-size: 11px;
+color: #FFA86C;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+/* Lista de Links do Menu */
+.nav-menu-list {
+list-style: none;
+margin-top: 35px;
+flex-grow: 1;
+}
+
+.nav-item {
+margin-bottom: 10px;
+}
+
+.nav-link {
+display: flex;
+align-items: center;
+text-decoration: none;
+padding: 14px 18px;
+border-radius: 8px;
+font-weight: 600;
+font-size: 15px;
+transition: all 0.25s ease-in-out;
+border-left: 4px solid transparent;
+}
+
+/* Estado Hover (Passar o mouse) */
+.nav-link:hover {
+background-color: #EAE2D5;
+color: #D9A05B;
+padding-left: 22px;
+}
+
+/* Estado Ativo (Página Atual) */
+.nav-link.active {
+background-color: #D9A05B;
+color: #FFFFFF;
+border-left: 4px solid #FFA86C;
+box-shadow: 0 4px 10px rgba(217, 160, 91, 0.2);
+}
+
+.nav-link.active .nav-icon {
+color: #FFFFFF;
+}
+
+/* Ícones Genéricos dos Menus (Simulados por texto/CSS) */
+.nav-icon {
+margin-right: 12px;
+font-size: 18px;
+color: #D9A05B;
+transition: color 0.25s;
+}
+
+/* Rodapé do Menu: Perfil do Usuário */
+.user-footer {
+padding-top: 20px;
+border-top: 2px solid #EAE2D5;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.user-avatar {
+width: 44px;
+height: 44px;
+background-color: #FFA86C;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+color: #FFFFFF;
+border: 2px solid #D9A05B;
+}
+
+.user-info {
+display: flex;
+flex-direction: column;
+}
+
+.user-name {
+font-size: 14px;
+font-weight: bold;
+}
+
+.user-role {
+font-size: 12px;
+color: #8C7E6E;
+}
+
+/* Área de Conteúdo Simulado (Apenas para demonstração do layout) */
+.content-preview {
+flex-grow: 1;
+padding: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #8C7E6E;
+font-style: italic;
+}

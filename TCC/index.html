@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unitrigo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-top">
+            <h2>Acessar Conta</h2>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema" aria-pressed="false">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+                <span class="theme-text">Escuro</span>
+            </button>
+        </div>
+
+        <form id="login-form">
+            <div class="box-login">
+                <input type="email" id="email" placeholder="seu@email.com" name="email" required>
+            </div>
+
+            <div class="box-login">
+                <input type="password" id="password" placeholder="Sua senha" name="password" required>
+            </div>
+
+            <button type="submit" class="btn-login" id="login-button">
+                <span class="btn-text">Entrar</span>
+                <span class="btn-loader" aria-hidden="true">
+                    <span class="loader-spinner"></span>
+                </span>
+            </button>
+
+            <div class="form-footer">
+                <a href="esqueci-senha.html">Esqueceu a senha?</a>
+                <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const loginButton = document.getElementById('login-button');
+        const loginText = loginButton.querySelector('.btn-text');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!loginForm.checkValidity()) {
+                loginForm.reportValidity();
+                return;
+            }
+
+            const velocidade = Math.random() > 0.5 ? 650 : 1500;
+
+            loginButton.classList.add('loading');
+            loginButton.disabled = true;
+            loginText.textContent = 'Entrando...';
+
+            setTimeout(function () {
+                window.location.href = 'painel.html';
+            }, velocidade);
+        });
+    </script>
+</body>
+</html>
+
+    
+
+      

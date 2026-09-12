@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato e Suporte - Sistema Farinha</title>
+    <link rel="stylesheet" href="styleContato.css">
+</head>
+<body>
+
+    <div class="contact-container">
+        
+        <!-- Formulário de Envio -->
+        <section class="contact-form-section">
+            <h1>Canais de Atendimento</h1>
+            <p>Precisa reportar um lote ou solicitar suporte técnico? Envie sua mensagem.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome do Solicitante</label>
+                    <input type="text" id="name" class="form-control" placeholder="Ex: Carlos Moinho" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sector">Setor / Departamento</label>
+                    <input type="text" id="sector" class="form-control" placeholder="Ex: Controle de Qualidade" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem ou Ocorrência</label>
+                    <textarea id="message" class="form-control" placeholder="Descreva os detalhes da sua solicitação..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar para a Central</button>
+            </form>
+        </section>
+
+        <!-- Informações Corporativas Diretas -->
+        <section class="contact-info-section">
+            <div class="info-header">
+                <h2>Contatos Diretos</h2>
+                
+                <ul class="info-list">
+                    <li class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <p>Ramal da Produção</p>
+                            <span>0800 400 1234 (Opção 3)</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <p>Suporte Técnico do Moinho</p>
+                            <span>qualidade@graonobre.com.br</span>
+                        </div>
+                    </li>
+                    <li class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <p>Planta de Processamento</p>
+                            <span>Silo Industrial Central - Bloco B</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Detalhe Visual Decorativo -->
+            <div class="moinho-decor">🌾</div>
+        </section>
+
+    </div>
+
+</body>
+</html>

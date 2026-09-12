@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unitrigo - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-top">
+            <h2>Cadastrar-se</h2>
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema" aria-pressed="false">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+                <span class="theme-text">Escuro</span>
+            </button>
+        </div>
+
+        <form class="auth-form" id="signup-form">
+            <div class="box-login">
+                <input type="text" id="nome" placeholder="Seu nome" name="nome" required>
+            </div>
+
+            <div class="box-login">
+                <input type="email" id="email" placeholder="seu@email.com" name="email" required>
+            </div>
+
+            <div class="box-login">
+                <input type="password" id="password" placeholder="Crie sua senha" name="password" required>
+            </div>
+
+            <button type="submit" class="btn-login" id="signup-button">
+                <span class="btn-text">Cadastrar</span>
+                <span class="btn-loader" aria-hidden="true">
+                    <span class="loader-spinner"></span>
+                </span>
+            </button>
+
+            <div class="form-footer">
+                <p>Já tem conta? <a href="index.html">Entrar</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const signupForm = document.getElementById('signup-form');
+        const signupButton = document.getElementById('signup-button');
+        const signupText = signupButton.querySelector('.btn-text');
+
+        signupForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (!signupForm.checkValidity()) {
+                signupForm.reportValidity();
+                return;
+            }
+
+            signupButton.classList.add('loading');
+            signupButton.disabled = true;
+            signupText.textContent = 'Cadastrando...';
+
+            setTimeout(function () {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
